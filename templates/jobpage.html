@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>{{job.title}} - JobSearch</title>
+  {% include 'bootstrap.html' %}
+
+</head>
+
+<body style="overflow-y: scroll;">
+  {% include 'nav.html' %}
+  {% include 'NextPageHeading.html' %}
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">JobSearch</h1>
+    <h3 class="mb-2">{{job.title}}</h3>
+    <p class="lead mt-0">{{job.location}}</p>
+    <h4>Responsibilites</h4>
+    <p>{{job.response}}</p>
+    <h4>Requirements</h4>
+    <p>{{job.requirements}}</p>
+    <h4>Salary</h4>
+    <p>{{job.currency}}{{job.salary}}</p>
+    {%include 'Application_form.html'%}
+  </div>
+  {% include 'footer.html' %}
+</body>
+
+</html>
